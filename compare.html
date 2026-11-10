@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>연구 산출 연속성 비교</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; }
+    input { padding: 6px; width: 200px; }
+    button { padding: 6px 14px; }
+    .cards { display: flex; gap: 16px; margin: 20px 0; }
+    .card { flex: 1; border: 1px solid #ddd; border-radius: 10px; padding: 14px; }
+    .badge { font-size: 18px; font-weight: bold; margin-top: 8px; }
+    .sub { color: #777; font-size: 13px; }
+    .chart-box { margin: 30px 0; }
+  </style>
+</head>
+<body>
+  <h2>연구 산출 연속성 비교 (최근 5년)</h2>
+
+  <input id="a" value="Kwanghoon Sohn">
+  <input id="b" value="Bumsub Ham">
+  <button onclick="run()">비교</button>
+  <p id="msg"></p>
+
+  <!-- 신호등 배지 카드 -->
+  <div class="cards">
+    <div class="card" id="cardA"></div>
+    <div class="card" id="cardB"></div>
+  </div>
+
+  <!-- 꺾은선 그래프 -->
+  <div class="chart-box">
+    <h3>연도별 논문 수</h3>
+    <canvas id="lineChart"></canvas>
+  </div>
+
+  <!-- 누적 계단 그래프 -->
+  <div class="chart-box">
+    <h3>누적 논문 수 (계단)</h3>
+    <canvas id="stepChart"></canvas>
+  </div>
+
+  <script>
+    const YEARS = [2021, 2022, 2023, 2024, 2025];
+    let lineChart = null;
+    let stepChart = null;
+
+    // OpenAlex에서 교수 1명의 연도별 논문 수 가져오기
+    async function getAuthor(name) {
+      const url = "https://api.openalex.org/authors?search=" + encodeURIComponent(name);
+      const res = await fetch(url);
+      const data = await res.json();
