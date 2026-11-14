@@ -1,0 +1,62 @@
+{
+  "lab_A": {
+    "lab_name": "DIML",
+    "professor": "손광훈",
+    "total_papers": 67,
+    "top_tier_papers": 33,
+    "yearly_works": [
+      {"year": 2025, "count": 8},
+      {"year": 2024, "count": 14},
+      {"year": 2023, "count": 12},
+      {"year": 2022, "count": 14},
+      {"year": 2021, "count": 19}
+    ],
+    "collaboration": {
+      "total_co_authors": 68,
+      "external_papers": 51,
+      "industry_papers": 16,
+      "overlap_ratio_yearly": 0.29
+    },
+    "keywords": ["신호처리", "자율주행 센서퓨전", "3D NeRF"],
+    "interdisciplinarity_demo_papers": [
+      {"id": "demo-a-01", "year": 2021, "field_ids": ["컴퓨터과학"]},
+      {"id": "demo-a-02", "year": 2022, "field_ids": ["컴퓨터과학"]},
+      {"id": "demo-a-03", "year": 2023, "field_ids": ["컴퓨터과학"]},
+      {"id": "demo-a-04", "year": 2023, "field_ids": ["컴퓨터과학", "수학"]},
+      {"id": "demo-a-05", "year": 2024, "field_ids": ["컴퓨터과학", "환경과학"]},
+      {"id": "demo-a-06", "year": 2024, "field_ids": ["환경과학", "수학"]},
+      {"id": "demo-a-07", "year": 2025, "field_ids": ["환경과학"]},
+      {"id": "demo-a-08", "year": 2025, "field_ids": ["컴퓨터과학", "환경과학"]},
+      {"id": "demo-a-09", "year": 2025, "field_ids": []}
+    ]
+  },
+  "lab_B": {
+    "lab_name": "Computer Vision Lab",
+    "professor": "함범섭",
+    "total_papers": 30,
+    "top_tier_papers": 24,
+    "yearly_works": [
+      {"year": 2025, "count": 5},
+      {"year": 2024, "count": 8},
+      {"year": 2023, "count": 7},
+      {"year": 2022, "count": 7},
+      {"year": 2021, "count": 3}
+    ],
+    "collaboration": {
+      "total_co_authors": 41,
+      "external_papers": 9,
+      "industry_papers": 7,
+      "overlap_ratio_yearly": 0.31
+    },
+    "keywords": ["생성형 AI", "Diffusion", "멀티모달"],
+    "interdisciplinarity_demo_papers": [
+      {"id": "demo-b-01", "year": 2021, "field_ids": ["재료과학"]},
+      {"id": "demo-b-02", "year": 2022, "field_ids": ["재료과학"]},
+      {"id": "demo-b-03", "year": 2023, "field_ids": ["재료과학", "화학"]},
+      {"id": "demo-b-04", "year": 2024, "field_ids": ["재료과학"]},
+      {"id": "demo-b-05", "year": 2024, "field_ids": ["재료과학"]},
+      {"id": "demo-b-06", "year": 2025, "field_ids": ["화학"]},
+      {"id": "demo-b-07", "year": 2025, "field_ids": []}
+    ]
+  }
+}
